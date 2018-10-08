@@ -1,0 +1,39 @@
+What do you want to do?
+
+I want to have everyone start by getting a short jupyter notebook up on their machines
+I want them to read it
+	I want the notebook to explain what we will cover
+	I want one example where the students have to explain what they think a program does
+	I want the notebook to direct them on how to open spyder on their machines
+
+I want everyone to open the included .py file with the day's exercise
+	(make several files to they get practice using tabs in spyder?)
+	I want the students to edit the bad-format code and run it in spyder	
+	
+
+What do you want the students to do in spyder?
+	I want them to analyze examples of bad programs (see above)
+	I want them to make suggestions about how to improve the bad examples
+	I want them to implement their suggestions into their own code (see above)
+		you will need to show them how to make a new script in spyder
+	I want them to write their own code by following along with correctly formatted comments that contain instructions
+
+what topics do you want to cover?
+	Dictionaries
+		.keys()
+		.values()
+		.items()
+		.setdefault()
+			include the pre-code THEN introduce this
+		dict[key] = value
+		**DNA problem
+	"many" user defined functions
+		functions that implement formulas
+		*1D Oscillator 
+			
+
+
+
+
+
+
