@@ -44,5 +44,8 @@ READ - Examples of poorly named variables, deeply nested loops, lack of function
 BAD NAMES - Spyder - Students work on improving the example code with emphasis on variable names and use of functions
 
 READ - Introduction to dictionary data type and *very short* background on DNA replication
+  read-dictionaries.ipynb
 
 DNA PROBLEM - Spyder - Students write a program that can generate a matching strand of DNA from a given strand
+  dna-solutions.ipynb
+  test-strands.txt
