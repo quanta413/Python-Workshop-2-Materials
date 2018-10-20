@@ -1,7 +1,7 @@
 '''
 Assume the tuning fork you will make will be 107 mm long and 7.2 mm thick throughout
 '''
-def frequency(material, youngs_mod, density):
+def frequency(material, youngs_mod, density, verbose = False):
     import math
 
     '''
@@ -20,7 +20,8 @@ def frequency(material, youngs_mod, density):
 
     frequency = constant * sqrt_term
 
-    print('The first vibrational mode of %s is f_1 = %f Hz' %(material,frequency))
+    if verbose:
+        print('The first vibrational mode of %s is f_1 = %f Hz' %(material,frequency))
 
     return frequency
 
