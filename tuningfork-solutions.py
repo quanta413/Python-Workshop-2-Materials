@@ -30,7 +30,19 @@ the keys of materials_dictionary are the names of the materials
 the values of each key is a list of [Young's Mod, density (kg/m^3)]
 '''
 
-materials_dictionary = {'aluminum' : [69, 2710], 'brass' : [125, 8520]}
+materials_dictionary = {}
+
+file = open('materials- youngs modulus-densities.txt')
+data = file.readlines()
+file.close()
+
+
+for line in data:
+    key, yModulus, density = line.strip('\n').split(',')
+
+    materials_dictionary[key] = [float(yModulus), float(density)]
+
+print(materials_dictionary)
 
 max_material = ''
 max_frequency = 0
