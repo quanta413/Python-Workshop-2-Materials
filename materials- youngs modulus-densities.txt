@@ -1,0 +1,17 @@
+Diamond (C),1210,3500
+Osmium (Os),562,22590
+Silicon carbide (SiC),450,3160
+Tungsten carbide (WC),650,15630
+Tungsten (W),410,19300
+Molybdenum (Mo),330,10280
+Beryllium (Be),287,1850
+Steel (ASTM-A36),200,8000
+polycrystalline Yttrium iron garnet (YIG),193,5110
+Wrought iron,210,7700
+Silicon Single crystal,185,2329
+Copper (Cu),117,8969
+Titanium (Ti),110.3,4506
+Brass,125,8400
+Bronze,120,8800
+Aluminum,69,2700
+Magnesium metal,45,1738

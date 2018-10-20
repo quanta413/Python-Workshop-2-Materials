@@ -6,19 +6,24 @@ Created on Sun Oct 14 21:55:49 2018
 """
 
 def small_drag_force(x, v):
+    '''Return the force due to a small linear drag.'''
     return -.1*v
 
 def small_spring_force(x, v):
+    '''Return the restoring force due to a small spring'''
     return -.1*x
 
 
 def integrate_by_dt(x0, v0, acceleration, dt):
+    '''Take one step forward in time by dt in position and velocity.'''
     x1 = x0 + v0*dt + 1/2*acceleration*dt**2
     v1 = v0 + acceleration*dt
     return x1, v1
 
 
 def integrate_Newtons_equations(x0, v0, mass, force, t0, tf, N):
+    '''Numerically integrate Newton's law for a given force and initial
+    conditions from t0 to tf in N steps.'''
     x_list = [x0]
     v_list = [v0]
     t_list = [t0]
