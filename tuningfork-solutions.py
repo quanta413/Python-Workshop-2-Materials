@@ -1,6 +1,6 @@
 import math
 
-def tuning_frequency(material, youngs_mod, density):
+def tuning_frequency(material, youngs_mod, density, verbose = False):
     '''
     Calculate the first vibrational mode of a tuning fork made of a material
     given the Young's Modulus (N/m^2) and density (kg/m^3) of the material.
@@ -17,6 +17,9 @@ def tuning_frequency(material, youngs_mod, density):
     sqrt_term = math.sqrt(youngs_mod/density)
 
     frequency = constant * sqrt_term
+
+    if verbose:
+        print('The first vibrational mode of %s is f_1 = %f Hz' %(material,frequency))
 
     return frequency
 
