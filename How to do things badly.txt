@@ -1,0 +1,8 @@
+Neglect to think about the problem first.
+Not reading the error message.
+Reuse variable names in the same scope.
+Deeply nest control flow.
+Neglect to write functions.
+Choose names for variables poorly.
+Group together unrelated data.
+Don't comment code.

@@ -1,13 +1,11 @@
-'''
-Assume the tuning fork you will make will be 107 mm long and 7.2 mm thick throughout
-'''
-def frequency(material, youngs_mod, density, verbose = False):
-    import math
+import math
 
+def tuning_frequency(material, youngs_mod, density, verbose = False):
     '''
-    calculate the first vibrational mode of a material
-    given the Young's Modulus (N/m^2) and density (kg/m^3) of the
-    material
+    Calculate the first vibrational mode of a tuning fork made of a material
+    given the Young's Modulus (N/m^2) and density (kg/m^3) of the material.
+    
+    The tuning fork is 107 mm long and 7.2 mm thick throughout.
     '''
 
     pre_factor = 0.162
@@ -26,31 +24,37 @@ def frequency(material, youngs_mod, density, verbose = False):
     return frequency
 
 
-'''
-the keys of materials_dictionary are the names of the materials
-the values of each key is a list of [Young's Mod, density (kg/m^3)]
-'''
+def load_material_properties(filename):
+    '''
+    Load csv data of material names, young's modulus, and density into a Python
+    dictionary.
+    
+    The keys of the materials dictionary are the names of materials and the
+    value of each is a tuple of (Young's Modulus, Density).
+    '''
+    materials_dictionary = {}
+    file = open(filename)
+    data = file.readlines()
+    file.close()
+    
+    for line in data:
+        key, yModulus, density = line.strip('\n').split(',')
+        materials_dictionary[key] = (float(yModulus), float(density))
 
-materials_dictionary = {}
-
-file = open('materials- youngs modulus-densities.txt')
-data = file.readlines()
-file.close()
+    return materials_dictionary
 
 
-for line in data:
-    key, yModulus, density = line.strip('\n').split(',')
-
-    materials_dictionary[key] = [float(yModulus), float(density)]
-
-print(materials_dictionary)
+materials = load_material_properties('materials- youngs modulus-densities.txt')
 
 max_material = ''
 max_frequency = 0
 
-for key, value in materials_dictionary.items():
-    calculated_frequency = frequency(key, materials_dictionary[key][0], materials_dictionary[key][1])
+for material, properties in materials.items():
+    calculated_frequency = tuning_frequency(material, properties[0],
+                                            properties[1])
     if calculated_frequency > max_frequency:
         max_frequency = calculated_frequency
-        max_material = key
-print('%s produces the highest frequency. f_1 = %f' %(max_material, max_frequency))
+        max_material = material
+
+print('%s produces the highest frequency. f_1 = %f' %(max_material,
+                                                      max_frequency))
