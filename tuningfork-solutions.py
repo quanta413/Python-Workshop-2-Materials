@@ -1,4 +1,4 @@
-from math import sqrt
+from math import sqrt  # you may want the sqrt function
 
 
 def load_material_properties(filename):
